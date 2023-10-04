@@ -28,18 +28,31 @@ console.log(prezzoTotaleKM)
             - var 'scontoAnziani' = 'prezzoTotale' * (40 / 100) 
         -ALTRIMENTI
             - alert = 'nessuno sconto applicato' */
+let valoreSconto
+
 if (numEta < 18) {
-    const scontoMinori = prezzoTotaleKM * ( 20 / 100)
-    console.log('scontoMinori')
+    valoreSconto = prezzoTotaleKM * ( 20 / 100)
+    console.log(valoreSconto)
     alert('Si applica lo sconto minori')
 }
 else if (numEta > 65) {
-    const scontoAnziani = prezzoTotaleKM * ( 40 / 100)
-    console.log('scontoAnziani')
+    valoreSconto = prezzoTotaleKM * ( 40 / 100)
+    console.log(valoreSconto)
     alert('Si applica lo sconto anziani')
 }
-else {
+else { 
+    valoreSconto = 0 ; 
     alert('Non si applica alcuno sconto')
 }
-/* - Definire il prezzo scontato*/
+/* - Definire il prezzo scontato
+    - dichiarare una const 'prezzoFinale'
+    - prezzoFinale = prezzoTotaleKM - prezzoSconto */
+let prezzoFinale = prezzoTotaleKM - valoreSconto; 
+console.log(prezzoFinale)
 /* - Arrotondare il risultato a due decimali*/
+prezzoFinale = prezzoFinale.toFixed(2);
+console.log(prezzoFinale)
+
+/* Stampare in pag il risultato */
+const priceDomElement = document.getElementById('price');
+priceDomElement.innerHTML = prezzoFinale
