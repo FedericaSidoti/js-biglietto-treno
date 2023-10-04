@@ -31,10 +31,12 @@ console.log(prezzoTotaleKM)
 if (numEta < 18) {
     const scontoMinori = prezzoTotaleKM * ( 20 / 100)
     console.log('scontoMinori')
+    alert('Si applica lo sconto minori')
 }
 else if (numEta > 65) {
     const scontoAnziani = prezzoTotaleKM * ( 40 / 100)
     console.log('scontoAnziani')
+    alert('Si applica lo sconto anziani')
 }
 else {
     alert('Non si applica alcuno sconto')
